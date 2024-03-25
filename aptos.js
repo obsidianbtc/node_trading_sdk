@@ -16,8 +16,8 @@ const aptos = new Aptos(new AptosConfig({ network: Network.MAINNET }));
 const getAccount = (address) => {
   switch (address) {
     // Ice Blue
-    case "insert_wallet_address_here":
-      let pk = new Ed25519PrivateKey(toUint8Array("insert_private_key_here"));
+    case env.WALLET_ADDRESS_1:
+      let pk = new Ed25519PrivateKey(toUint8Array(env.WALLET_PRIVATE_KEY_1));
       let account1 = Account.fromPrivateKey({ privateKey: pk });
       return account1;
     // Apt Monkey
@@ -33,8 +33,8 @@ function toHexString(byteArray) {
 }
 
 const aptosMarketClient = new AptosMarketClient({
-  apiKey: "insert_api_key",
-  apiUser: "Insert_api_user",
+  apiKey: env.API_KEY,
+  apiUser: env.API_USER,
 });
 
 const txHash = async (hash) => {
