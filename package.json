@@ -1,0 +1,18 @@
+{
+  "name": "trade_sdk",
+  "version": "1.0.0",
+  "description": "Node server for interacting with the Indexer SDK",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "obsidianbtc",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "nodemon": "^3.1.0",
+    "@aptos-labs/ts-sdk": "^1.10.0",
+    "@indexer-xyz/aptos": "^0.0.19"
+  }
+}
